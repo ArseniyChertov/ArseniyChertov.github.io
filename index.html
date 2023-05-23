@@ -55,13 +55,29 @@
                       width:100%
                   }
                 }
+                @media only screen and (min-width: 600px) {
+                    .skills{
+                        border-radius:6px;
+                        border: 2px solid white;
+                        background-color:black;
+                        margin-left:100px;
+                        padding:10px 200px;
+                    }
+                }
                 
-                .skills{
-                    border-radius:6px;
-                    border: 2px solid white;
-                    background-color:black;
-                    margin-left:100px;
-                    padding:10px 200px;
+                @media only screen and (max-width: 200px) {
+                    .skills{
+                        border-radius:6px;
+                        border: 2px solid white;
+                        background-color:black;
+                        
+                        padding:10px 200px;
+                    }
+                }
+                
+                .skills:hover{
+                    background-color:white;
+                    color:black;
                 }
         
         

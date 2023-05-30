@@ -6,6 +6,25 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.skills')) {
+            var dropdowns = document.getElementsByClassName("content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+            }
+          }
+        }
+        </script>
             <style>
                 h1{
                     text-align: center;
@@ -90,6 +109,54 @@
                     background-color:white;
                     color:black;
                 }
+                
+                
+
+                .dropdown {
+                  position: relative;
+                  display: inline-block;
+                }
+
+                .content {
+                  display: none;
+                  position: relative;
+                  background-color: black;
+                  width:650px;
+                  height: 
+                  margin-left:70px;
+                  border-radius:6px;
+                  border: 2px solid white;
+                  margin-top:20px;
+                  
+                  
+                  
+                }
+                .content a {
+                  color: black;
+                  padding: 12px 16px;
+                  text-decoration: none;
+                  display: block;
+                  
+                }
+                
+                
+                .dropdown a:hover {background-color: #ddd;}
+                
+                
+                
+                .leftlist{
+                    float:left;
+                
+                }
+                
+                
+                
+                
+                h4{
+                    margin-top:200px;
+                    font-size:40px;
+                    text-align:center;
+                }
         
         
             </style>
@@ -127,11 +194,12 @@
             <li>Making smaller projects for fun!</li>
         </ul>
         
-        <p>Outside of computer science, my other interest is:</p>
+        <p>Outside of computer science, my other interests are:</p>
         
         
         <ul>
             <li>Learning concepts in finance and statistics</li>
+            <li>Snowboarding and soccer</li>
         </ul>
         
         
@@ -140,13 +208,42 @@
     
     <img src="pic.JPG">
         
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="skills">Skills</button>
+  <div id="myDropdown" class="content">
+      <div class="leftlist">
+          <h2>Programming <br>Languages</h2>
+          <ul>
+              <li>Java</li>
+              <li>Python</li>
+              <li>C/C++</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              
+          </ul>
+      </div>
+      <div class="rightlist">
+          <h2>Common Technologies</h2>
+          <ul>
+              <li>Github</li>
+              <li>Linux</li>
+              <li>Windows</li>
+              <li>MAC OS</li>
+          </ul>
+      </div>
+      
+  </div>
+</div>
     
-<button class="skills">Skills</button>
 <button class="post">Post-Secondary Education </button>
 
-    
-    
-    
+
+
+<h4>Contact Me</h4>
    
     
         

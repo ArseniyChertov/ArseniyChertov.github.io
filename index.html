@@ -1,254 +1,282 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        
-        <script>
-        /* When the user clicks on the button,
-        toggle between hiding and showing the dropdown content */
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: orange;
+        }
+
+        .topnav {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .topnav a {
+            text-decoration: none;
+            color: orange;
+            padding: 10px;
+        }
+
+        .topnav a:hover {
+            color: yellow;
+        }
+
+        .about {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 24px;
+        }
+
+        .about p {
+            font-size: 20px;
+        }
+
+        .interests {
+            text-align: center;
+        }
+
+        .interests h2 {
+            font-size: 24px;
+        }
+
+        .interests ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .interests li {
+            font-size: 20px;
+        }
+
+        .image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button-container button.skills {
+            border: 2px solid white;
+            border-radius: 6px;
+            background-color: black;
+            color: white;
+            padding: 15px 130px; /* Increase the width for Skills button */
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .button-container button.post {
+            border: 2px solid white;
+            border-radius: 6px;
+            background-color: black;
+            color: white;
+            padding: 15px 40px; /* Keep the width for Post-Secondary Education button */
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .button-container button.email, .button-container button.linkedin {
+            border: 2px solid white;
+            border-radius: 6px;
+            background-color: black;
+            color: white;
+            padding: 15px 130px; /* Set the same width as Skills button */
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .button-container button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .dropdown {
+            text-align: center;
+        }
+
+        .content {
+            display: none;
+            background-color: black;
+            border-radius: 6px;
+            border: 2px solid white;
+            margin-top: 20px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content li {
+            font-size: 20px;
+        }
+
+        .contact-heading {
+            text-align: center;
+            font-size: 28px; /* Increase the font size for a bigger heading */
+            color: white; /* Change the font color to white */
+            margin-top: 70px; /* Adjust the top margin to move it lower */
+        }
+
+        .contact-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-buttons a {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 15px 130px; /* Set the same width as Skills button */
+            text-decoration: none;
+            margin: 5px;
+            border: 2px solid white;
+            font-size: 20px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Arseniy Chertov</h1>
+        </div>
+
+        <div class="topnav">
+            <a href="home">Home</a>
+            <a href="resume.pdf" target="_blank">Resume</a>
+            <a class="contact" href="contact-me.html">Contact Me</a>
+            <a href="https://github.com/ArseniyChertov?tab=repositories">Github</a>
+        </div>
+
+        <div class="about">
+            <h2>About Me</h2>
+            <p>Hello! My name is <b>Arseniy Chertov</b> and I have completed my bachelor degree in business with
+                a specialization in Finance along with a major in computer science at the University of Windsor. I am
+                interested in:</p>
+        </div>
+
+        <div class="interests">
+            <h2>Interests</h2>
+            <ul>
+                <li>Computer vision</li>
+                <li>Web development (frontend)</li>
+                <li>Working with languages like C and Python</li>
+                <li>Making smaller projects for fun</li>
+                <li>Learning concepts in finance and statistics</li>
+                <li>Snowboarding and soccer</li>
+            </ul>
+        </div>
+
+        <img class="image" src="pic.JPG" alt="Arseniy's Image">
+
+        <div class="button-container">
+            <button onclick="myFunction()" class="skills">Skills</button>
+            <div id="myDropdown" class="content">
+                <div class="leftlist">
+                    <h2>Programming Languages</h2>
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C/C++</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="rightlist">
+                    <h2>Common Technologies</h2>
+                    <ul>
+                        <li>Github</li>
+                        <li>Linux</li>
+                        <li>Windows</li>
+                        <li>MAC OS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button onclick="myEducation()" class="post">Post-Secondary Education</button>
+            <div id="educationDropdown" class="content">
+                <h2>University of Windsor graduate</h2>
+                <ul>
+                    <li>Honours Computer Science and Business (Finance Specialization)</li>
+                    <li>September 2019 - April 2023</li>
+                    <li>Odette entrance scholarship valued at $6500</li>
+                    <li>Sunlife award valued at $1200</li>
+                </ul>
+            </div>
+        </div>
+
+        <h4 class="contact-heading">Contact Me</h4>
+
+        <div class="contact-buttons">
+            <a href="mailto:arse.chertov@gmail.com" class="email">Email Me</a>
+            <a href="https://www.linkedin.com/in/arseniy-chertov/" class="linkedin">LinkedIn</a>
+        </div>
+    </div>
+
+    <script>
+        // When the user clicks on the button, toggle between hiding and showing the dropdown content
         function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function myEducation() {
+            document.getElementById("educationDropdown").classList.toggle("show");
         }
 
         // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-          if (!event.target.matches('.skills')) {
-            var dropdowns = document.getElementsByClassName("content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
+        window.onclick = function (event) {
+            if (!event.target.matches('.skills') && !event.target.matches('.post')) {
+                var dropdowns = document.getElementsByClassName("content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    openDropdown.style.display = 'none'; // Hide the dropdowns
+                }
             }
-          }
         }
-        </script>
-            <style>
-                h1{
-                    text-align: center;
-                }
-                
-                body{
-                    font-size:20px;
-                    color:white;
-                    background-color:black;
-                    font-family: Times New Roman, sans-serif;
-                }
-                
-                .topnav{
-                    font-size: 18px;
-                    background-color: rgba(255,255,255,0.5);
-                    padding: 20px
-                    
-                }
-                .topnav a{
-                    color:orange;
-                    text-decoration: None;
-                    padding:5px;
-                    
-                }
-                .topnav a:hover{
-                    color:yellow;
-                }
-                
-                img{
-                    float:left;
-                    border-radius:25%;
-                    width: 400px;
-                    
-                }
-                
-                @media only screen and (min-width: 600px) {
-                  .about{
-                    padding-left:50px;
-                    width:60%;
-                    float:left;
-                    
-                  }
-                }
-                
-                @media only screen and (max-width: 200px) {
-                  .about{
-                      width:100%
-                  }
-                }
-                @media only screen and (min-width: 600px) {
-                    .skills{
-                        border-radius:6px;
-                        border: 2px solid white;
-                        background-color:black;
-                        margin-left:100px;
-                        margin-top: 70px;
-                        padding:15px 270px;
-                    }
-                }
-                @media only screen and (min-width: 600px) {
-                    .post{
-                        border-radius:6px;
-                        border: 2px solid white;
-                        background-color:black;
-                        float:right;
-                        margin-right: 110px;
-                        margin-top: 70px;
-                        padding:15px 200px;
-                    }
-                }
-                
-                @media only screen and (max-width: 200px) {
-                    .skills{
-                        border-radius:6px;
-                        border: 2px solid white;
-                        background-color:black;
-                        padding:10px 200px;
-                    }
-                }
-                
-                .skills:hover{
-                    background-color:white;
-                    color:black;
-                }
-                
-                
-
-                .dropdown {
-                  position: relative;
-                  display: inline-block;
-                }
-
-                .content {
-                  display: none;
-                  position: relative;
-                  background-color: black;
-                  width:650px;
-                  height: 
-                  margin-left:70px;
-                  border-radius:6px;
-                  border: 2px solid white;
-                  margin-top:20px;
-                  
-                  
-                  
-                }
-                .content a {
-                  color: black;
-                  padding: 12px 16px;
-                  text-decoration: none;
-                  display: block;
-                  
-                }
-                
-                
-                .dropdown a:hover {background-color: #ddd;}
-                
-                
-                
-                .leftlist{
-                    float:left;
-                
-                }
-                
-                
-                
-                
-                h4{
-                    margin-top:200px;
-                    font-size:40px;
-                    text-align:center;
-                }
-        
-        
-            </style>
-            
-            <title>Arseniy Chertov</title>
-            
-    </head>
-    
-<body>
-    
-<div class="topnav">
-    <a style="color: orange; font-size: 22px;" href="arseniy">Arseniy Chertov</a>
-    <a  href="home">Home</a>
-    <a  href="resume.pdf" target="_blank">Resume</a>
-    <a  class ="contact" href="contact me">Contact me</a>
-    <a  href="https://github.com/ArseniyChertov?tab=repositories">Github</a>
-</div>
-
-
-    
-    
-
-    <div class="about">
-        <h1>About Me</h1>
-        
-        <p>Hello! My name is <b>Arseniy Chertov</b> and I have completed my bachelor degree in business with
-        a specialization in Finance along with a major in computer science at the University of Windsor, I am interested in: </p>
-        
-        
-        
-        <ul>
-            <li>Computer vision;</li>
-            <li>Web development (frontend);</li>
-            <li>Working with languages like C and Python; and</li>
-            <li>Making smaller projects for fun!</li>
-        </ul>
-        
-        <p>Outside of computer science, my other interests are:</p>
-        
-        
-        <ul>
-            <li>Learning concepts in finance and statistics</li>
-            <li>Snowboarding and soccer</li>
-        </ul>
-        
-        
-        
-    </div>
-    
-    <img src="pic.JPG">
-        
-
-
-
-<div class="dropdown">
-  <button onclick="myFunction()" class="skills">Skills</button>
-  <div id="myDropdown" class="content">
-      <div class="leftlist">
-          <h2>Programming <br>Languages</h2>
-          <ul>
-              <li>Java</li>
-              <li>Python</li>
-              <li>C/C++</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              
-          </ul>
-      </div>
-      <div class="rightlist">
-          <h2>Common Technologies</h2>
-          <ul>
-              <li>Github</li>
-              <li>Linux</li>
-              <li>Windows</li>
-              <li>MAC OS</li>
-          </ul>
-      </div>
-      
-  </div>
-</div>
-    
-<button class="post">Post-Secondary Education </button>
-
-
-
-<h4>Contact Me</h4>
-   
-    
-        
-    
-        
+    </script>
 </body>
-</html>
 
+</html>
